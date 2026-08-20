@@ -5,8 +5,11 @@ most common openings from memory, play freely in a sandbox with a live opening
 guide, and browse a study book of what you have learned and what is left to
 discover.
 
+**Live: https://arnauddc807.github.io/chess-opener/**
+
 No build step, no dependencies, no network calls. Open `index.html` and it runs —
-including offline, once the service worker has cached it.
+including offline, once the service worker has cached it. On a phone, use *Add to
+Home Screen* and it installs as a standalone app.
 
 ## The three modes
 
@@ -63,21 +66,47 @@ python3 -m http.server 8000     # then open http://localhost:8000
 Opening `index.html` from the filesystem works too, except that the service
 worker (offline caching) needs an `http(s)` origin.
 
+## Deploying
+
+`.github/workflows/pages.yml` publishes the repository root to GitHub Pages on
+every push to `main`, gated behind `node test/run.js` — a red engine or a broken
+opening line stops the deploy.
+
+One-time setup: **Settings → Pages → Build and deployment → Source: GitHub
+Actions**. There is nothing to build, so the workflow uploads the checkout as-is.
+
+Every path in the app is relative and the manifest uses `start_url: "."`, so it
+works from a project subpath (`/chess-opener/`) as well as from a domain root.
+`.nojekyll` stops Pages from running the files through Jekyll.
+
+The service worker uses stale-while-revalidate rather than cache-first: asset
+filenames never change here, so cache-first would pin returning visitors to the
+first version they ever loaded. Bump `CACHE` in `sw.js` when the shipped file
+list changes.
+
 ## Tests
 
 ```sh
-node test/run.js                # engine perft + rules + book validation, no deps
-CHROMIUM_PATH=/path/to/chrome node test/e2e.js   # UI walkthrough, needs playwright
+node test/run.js                                   # engine + book, no dependencies
+CHROMIUM_PATH=/path/to/chrome node test/e2e.js     # UI walkthrough (playwright)
+CHROMIUM_PATH=/path/to/chrome node test/pages.js   # subpath + offline + updates
 ```
 
 `test/run.js` runs perft against five standard positions (including the tricky
 castling, en passant and promotion cases), checks mate/stalemate detection, and
 replays every line in the book to confirm it is legal and written in correct SAN.
 
+`test/pages.js` serves the app from a `/chess-opener/` subpath the way Pages
+does and checks that nothing 404s, that the manifest and icons resolve, that the
+service worker registers against the project scope, that the app boots and a
+drill runs with the network switched off, and that a changed file reaches a
+returning visitor.
+
 ## Layout
 
 ```
 index.html            app shell and tab bar
+.github/workflows/    test + deploy to GitHub Pages
 css/styles.css        design system, board, all views
 js/chess.js           0x88 chess engine — move generation, SAN, FEN, undo
 js/openings.js        the opening book
