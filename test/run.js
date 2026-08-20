@@ -87,5 +87,39 @@ scope.OPENINGS.forEach(function (o) {
 ok(scope.OPENINGS.filter(function (o) { return o.side === 'w'; }).length >= 10, 'enough White lines');
 ok(scope.OPENINGS.filter(function (o) { return o.side === 'b'; }).length >= 10, 'enough Black lines');
 
+/* ECO codes, checked against the Lichess opening database rather than against
+ * our own opinion. test/fixtures/eco.json records the deepest position each
+ * line reaches and the code that database assigns to it; regenerate it with
+ * test/tools/build-eco-fixture.js. Because the fixture pins the FEN as well as
+ * the code, editing a line's moves fails here until the fixture is rebuilt. */
+console.log('\nECO codes (vs. Lichess database)');
+var fixture = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/eco.json'), 'utf8'));
+scope.OPENINGS.forEach(function (o) {
+  var exp = fixture.openings[o.id];
+  if (!exp) { ok(false, o.id + ' — no ECO fixture entry; rebuild test/fixtures/eco.json'); return; }
+  if (exp.source === 'manual') {
+    ok(o.eco === exp.eco, o.id + ' — ' + o.eco + ' (settled by hand: ' +
+      (o.eco === exp.eco ? 'ok' : 'expected ' + exp.eco) + ')');
+    return;
+  }
+  var c = new Chess(), reached = null;
+  for (var i = 0; i < o.moves.length && i < exp.ply; i++) c.move(o.moves[i]);
+  reached = c.fen().split(' ').slice(0, 4).join(' ');
+  if (reached !== exp.fen) {
+    ok(false, o.id + ' — line changed at ply ' + exp.ply + '; rebuild test/fixtures/eco.json');
+    return;
+  }
+  ok(o.eco === exp.eco, o.id + ' — ' + o.eco +
+    (o.eco === exp.eco ? ' (' + exp.name + ')' : ' should be ' + exp.eco + ' (' + exp.name + ')'));
+});
+
+/* Each line should finish on a move by the side being drilled, so the last
+ * thing the learner does is play their own move. */
+console.log('\nline shape');
+scope.OPENINGS.forEach(function (o) {
+  var lastMover = o.moves.length % 2 === 1 ? 'w' : 'b';
+  ok(lastMover === o.side, o.id + ' — ends on a ' + lastMover + ' move, drilled as ' + o.side);
+});
+
 console.log('\n' + pass + ' passed, ' + fail + ' failed\n');
 process.exit(fail ? 1 : 0);

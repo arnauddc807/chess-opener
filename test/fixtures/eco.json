@@ -1,0 +1,319 @@
+{
+  "source": "https://github.com/lichess-org/chess-openings",
+  "databaseLines": 3810,
+  "openings": {
+    "italian-giuoco-piano": {
+      "ply": 13,
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/2N2N2/PP3PPP/R1BQK2R b KQkq -",
+      "eco": "C54",
+      "name": "Italian Game: Giuoco Piano, Greco's Attack",
+      "source": "lichess-deepest"
+    },
+    "ruy-lopez-closed": {
+      "ply": 17,
+      "fen": "r1bq1rk1/2p1bppp/p1np1n2/1p2p3/4P3/1BP2N1P/PP1P1PP1/RNBQR1K1 b - -",
+      "eco": "C92",
+      "name": "Ruy Lopez: Closed",
+      "source": "lichess-deepest"
+    },
+    "ruy-lopez-berlin": {
+      "ply": 16,
+      "fen": "r1bk1b1r/ppp2ppp/2p5/4Pn2/8/5N2/PPP2PPP/RNB2RK1 w - -",
+      "eco": "C67",
+      "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+      "source": "lichess-deepest"
+    },
+    "scotch-game": {
+      "ply": 8,
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b5/3NP3/8/PPP2PPP/RNBQKB1R w KQkq -",
+      "eco": "C45",
+      "name": "Scotch Game: Classical Variation",
+      "source": "lichess-deepest"
+    },
+    "two-knights-fried-liver": {
+      "ply": 11,
+      "fen": "r1bqkb1r/ppp2Npp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R b KQkq -",
+      "eco": "C57",
+      "name": "Italian Game: Two Knights Defense, Fried Liver Attack",
+      "source": "lichess-deepest"
+    },
+    "evans-gambit": {
+      "ply": 14,
+      "fen": "r1bqk2r/ppppnppp/2n5/b7/2BpP3/2P2N2/P4PPP/RNBQ1RK1 w kq -",
+      "eco": "C52",
+      "name": "Italian Game: Evans Gambit, Mieses Defense",
+      "source": "lichess-deepest"
+    },
+    "petrov-defense": {
+      "ply": 15,
+      "fen": "r1bqk2r/ppp1bppp/2n5/3p4/2PPn3/3B1N2/PP3PPP/RNBQ1RK1 b kq c3",
+      "eco": "C42",
+      "name": "Petrov's Defense: Classical Attack, Jaenisch Variation",
+      "source": "lichess-deepest"
+    },
+    "philidor-defense": {
+      "ply": 8,
+      "fen": "r1bqkb1r/pppn1ppp/3p1n2/4p3/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq -",
+      "eco": "C41",
+      "name": "Philidor Defense: Lion Variation",
+      "source": "lichess-deepest"
+    },
+    "kings-gambit": {
+      "ply": 11,
+      "fen": "rnbqkb1r/pppp1p1p/5n2/4N3/3PPppP/8/PPP3P1/RNBQKB1R b KQkq d3",
+      "eco": "C39",
+      "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, Rubinstein Variation",
+      "source": "lichess-deepest"
+    },
+    "scholars-mate-defense": {
+      "ply": 3,
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR b KQkq -",
+      "eco": "C23",
+      "name": "Bishop's Opening",
+      "source": "lichess-deepest"
+    },
+    "sicilian-najdorf": {
+      "ply": 15,
+      "fen": "rn1qkb1r/1p3ppp/p2pbn2/4p3/4P3/1NN1BP2/PPP3PP/R2QKB1R b KQkq -",
+      "eco": "B90",
+      "name": "Sicilian Defense: Najdorf Variation, English Attack",
+      "source": "lichess-deepest"
+    },
+    "sicilian-dragon": {
+      "ply": 16,
+      "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/R3KB1R w KQ -",
+      "eco": "B76",
+      "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack",
+      "source": "lichess-deepest"
+    },
+    "sicilian-accelerated-dragon": {
+      "ply": 13,
+      "fen": "r1bqk2r/pp1pppbp/2n2np1/8/2BNP3/2N1B3/PPP2PPP/R2QK2R b KQkq -",
+      "eco": "B35",
+      "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation",
+      "source": "lichess-deepest"
+    },
+    "sicilian-alapin": {
+      "ply": 8,
+      "fen": "rnbqkb1r/pp1ppppp/8/3nP3/3p4/2P5/PP3PPP/RNBQKBNR w KQkq -",
+      "eco": "B22",
+      "name": "Sicilian Defense: Alapin Variation, Smith-Morra Declined",
+      "source": "lichess-deepest"
+    },
+    "sicilian-open-white": {
+      "ply": 15,
+      "fen": "rn1qkb1r/1p3ppp/p2pbn2/4p3/4P3/1NN1BP2/PPP3PP/R2QKB1R b KQkq -",
+      "eco": "B90",
+      "name": "Sicilian Defense: Najdorf Variation, English Attack",
+      "source": "lichess-deepest"
+    },
+    "smith-morra-gambit": {
+      "ply": 12,
+      "fen": "r1bqkbnr/pp3ppp/2npp3/8/2B1P3/2N2N2/PP3PPP/R1BQK2R w KQkq -",
+      "eco": "B21",
+      "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Scheveningen Formation",
+      "source": "lichess-deepest"
+    },
+    "french-winawer": {
+      "ply": 14,
+      "fen": "rnb1k2r/ppq1nppp/4p3/2ppP3/3P2Q1/P1P5/2P2PPP/R1B1KBNR w KQkq -",
+      "eco": "C18",
+      "name": "French Defense: Winawer Variation, Poisoned Pawn Variation",
+      "source": "lichess-deepest"
+    },
+    "french-advance-white": {
+      "ply": 12,
+      "fen": "r1b1kb1r/pp3ppp/1qn1p2n/2ppP3/3P4/P1P2N2/1P3PPP/RNBQKB1R w KQkq -",
+      "eco": "C02",
+      "name": "French Defense: Advance Variation, Lputian Variation",
+      "source": "lichess-deepest"
+    },
+    "caro-kann-classical": {
+      "ply": 15,
+      "fen": "r2qkbnr/pp1nppp1/2p3bp/7P/3P4/5NN1/PPP2PP1/R1BQKB1R b KQkq -",
+      "eco": "B19",
+      "name": "Caro-Kann Defense: Classical Variation, Spassky Variation",
+      "source": "lichess-deepest"
+    },
+    "caro-kann-advance-white": {
+      "ply": 7,
+      "fen": "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq -",
+      "eco": "B12",
+      "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+      "source": "lichess-deepest"
+    },
+    "scandinavian-defense": {
+      "ply": 8,
+      "fen": "rnb1kb1r/ppp1pppp/5n2/q7/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq -",
+      "eco": "B01",
+      "name": "Scandinavian Defense: Main Line, Mieses Variation",
+      "source": "lichess-deepest"
+    },
+    "pirc-defense": {
+      "ply": 11,
+      "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/3PPP2/2NB1N2/PPP3PP/R1BQK2R b KQ -",
+      "eco": "B09",
+      "name": "Pirc Defense: Austrian Attack, Weiss Variation",
+      "source": "lichess-deepest"
+    },
+    "alekhine-defense": {
+      "ply": 8,
+      "fen": "rnbqkb1r/ppp1pp1p/3p2p1/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq -",
+      "eco": "B04",
+      "name": "Alekhine Defense: Modern Variation, Alburt Variation",
+      "source": "lichess-deepest"
+    },
+    "modern-defense": {
+      "ply": 6,
+      "fen": "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq -",
+      "eco": "B06",
+      "name": "Modern Defense: Standard Defense",
+      "source": "lichess-deepest"
+    },
+    "queens-gambit-declined": {
+      "ply": 9,
+      "fen": "rnbqkb1r/ppp2ppp/5n2/3p2B1/3P4/2N5/PP2PPPP/R2QKBNR b KQkq -",
+      "eco": "D35",
+      "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+      "source": "lichess-deepest"
+    },
+    "queens-gambit-white": {
+      "ply": 14,
+      "fen": "rnbq1rk1/pp3ppp/4pn2/2bp4/2P2B2/2N1PN2/PP3PPP/R2QKB1R w KQ -",
+      "eco": "D37",
+      "name": "Queen's Gambit Declined: Harrwitz Attack, Main Line",
+      "source": "lichess-deepest"
+    },
+    "slav-defense": {
+      "ply": 15,
+      "fen": "rn1qk2r/pp3ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P3PPP/R1BQ1RK1 b kq -",
+      "eco": "D19",
+      "name": "Slav Defense: Czech Variation, Dutch Variation",
+      "source": "lichess-deepest"
+    },
+    "queens-gambit-accepted": {
+      "ply": 6,
+      "fen": "rnbqkbnr/ppp2ppp/8/4p3/2pPP3/8/PP3PPP/RNBQKBNR w KQkq e6",
+      "eco": "D20",
+      "name": "Queen's Gambit Accepted: Central Variation, McDonnell Defense",
+      "source": "lichess-deepest"
+    },
+    "london-system": {
+      "ply": 11,
+      "fen": "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq -",
+      "eco": "D02",
+      "name": "Queen's Pawn Game: London System",
+      "source": "lichess-deepest"
+    },
+    "catalan-opening": {
+      "ply": 12,
+      "fen": "rnbq1rk1/ppp1bppp/4pn2/8/2pP4/5NP1/PP2PPBP/RNBQ1RK1 w - -",
+      "eco": "E05",
+      "name": "Catalan Opening: Open Defense, Classical Line",
+      "source": "lichess-deepest"
+    },
+    "kings-indian-defense": {
+      "ply": 14,
+      "fen": "r1bq1rk1/ppp2pbp/2np1np1/4p3/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 w - -",
+      "eco": "E97",
+      "name": "King's Indian Defense: Orthodox Variation, Aronin-Taimanov Defense",
+      "source": "lichess-deepest"
+    },
+    "nimzo-indian": {
+      "ply": 12,
+      "fen": "rnbq1rk1/p1pp1ppp/1p2pn2/8/2PP4/P1Q5/1P2PPPP/R1B1KBNR w KQ -",
+      "eco": "E32",
+      "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense",
+      "source": "lichess-deepest"
+    },
+    "grunfeld-defense": {
+      "ply": 15,
+      "fen": "rnbqk2r/pp2ppbp/6p1/2p5/3PP3/2P2N2/P4PPP/1RBQKB1R b Kkq -",
+      "eco": "D85",
+      "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
+      "source": "lichess-deepest"
+    },
+    "benoni-modern": {
+      "ply": 16,
+      "fen": "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQK2R w KQ -",
+      "eco": "A72",
+      "name": "Benoni Defense: Classical Variation",
+      "source": "lichess-deepest"
+    },
+    "benko-gambit": {
+      "ply": 13,
+      "fen": "rn1qkb1r/4pppp/b2p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKBNR b KQkq e3",
+      "eco": "A59",
+      "name": "Benko Gambit Accepted: Yugoslav",
+      "source": "lichess-deepest"
+    },
+    "budapest-gambit": {
+      "ply": 7,
+      "fen": "rnbqkb1r/pppp1ppp/8/4P3/2P2Bn1/8/PP2PPPP/RN1QKBNR b KQkq -",
+      "eco": "A52",
+      "name": "Indian Defense: Budapest Gambit Accepted, Main Line, Rubinstein Variation",
+      "source": "lichess-deepest"
+    },
+    "dutch-leningrad": {
+      "eco": "A87",
+      "source": "manual",
+      "reason": "This move order (2.g3 before c4) transposes into the Leningrad only at 7.Nc3, which the database indexes solely via its A88 (7...c6) and A89 (7...Nc6) children. 7...Qe8 is neither, so it stays in the A87 parent bucket."
+    },
+    "english-opening": {
+      "ply": 12,
+      "fen": "r1bqkb1r/ppp2ppp/1nn5/4p3/8/2N2NP1/PP1PPPBP/R1BQK2R w KQkq -",
+      "eco": "A29",
+      "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6",
+      "source": "lichess-deepest"
+    },
+    "reti-opening": {
+      "ply": 4,
+      "fen": "rnbqkbnr/ppp1pppp/8/8/2Pp4/5N2/PP1PPPPP/RNBQKB1R w KQkq -",
+      "eco": "A09",
+      "name": "Réti Opening: Advance Variation",
+      "source": "lichess-deepest"
+    },
+    "kings-indian-attack": {
+      "ply": 15,
+      "fen": "r1bq1rk1/pp2bppp/2n1pn2/2pp4/4P3/3P1NP1/PPPN1PBP/R1BQR1K1 b - -",
+      "eco": "A08",
+      "name": "King's Indian Attack: Sicilian Variation",
+      "source": "lichess-deepest"
+    },
+    "vienna-game": {
+      "ply": 10,
+      "fen": "rnbqk2r/ppp1bppp/8/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq -",
+      "eco": "C29",
+      "name": "Vienna Game: Vienna Gambit, Breyer Variation",
+      "source": "lichess-deepest"
+    },
+    "englund-gambit-trap": {
+      "ply": 6,
+      "fen": "r1b1kbnr/ppppqppp/2n5/4P3/8/5N2/PPP1PPPP/RNBQKB1R w KQkq -",
+      "eco": "A40",
+      "name": "Englund Gambit: Main Line",
+      "source": "lichess-deepest"
+    },
+    "stafford-gambit": {
+      "ply": 10,
+      "fen": "r1bqk2r/ppp2ppp/2p2n2/2b5/4P3/3P4/PPP2PPP/RNBQKB1R w KQkq -",
+      "eco": "C42",
+      "name": "Petrov's Defense: Stafford Gambit Accepted",
+      "source": "lichess-deepest"
+    },
+    "legals-mate": {
+      "ply": 5,
+      "fen": "rnbqkbnr/ppp2ppp/3p4/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq -",
+      "eco": "C41",
+      "name": "Philidor Defense",
+      "source": "lichess-deepest"
+    },
+    "blackburne-shilling": {
+      "ply": 6,
+      "fen": "r1bqkbnr/pppp1ppp/8/4p3/2BnP3/5N2/PPPP1PPP/RNBQK2R w KQkq -",
+      "eco": "C50",
+      "name": "Italian Game: Blackburne-Kostić Gambit",
+      "source": "lichess-deepest"
+    }
+  }
+}

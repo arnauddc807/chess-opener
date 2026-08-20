@@ -96,6 +96,17 @@ CHROMIUM_PATH=/path/to/chrome node test/pages.js   # subpath + offline + updates
 castling, en passant and promotion cases), checks mate/stalemate detection, and
 replays every line in the book to confirm it is legal and written in correct SAN.
 
+The opening book is checked against an outside source, not against its own
+opinion. `test/fixtures/eco.json` is generated from the
+[Lichess opening database](https://github.com/lichess-org/chess-openings) (3,810
+lines, CC0) by `test/tools/build-eco-fixture.js`: for each line it records the
+deepest position that line reaches and the ECO code assigned to it. `run.js`
+then checks every declared `eco` against it. The fixture pins the position as
+well as the code, so editing a line's moves fails the run until the fixture is
+rebuilt — an ECO code cannot quietly drift away from the moves it labels. One
+line (the Leningrad Dutch, which transposes through a move order the database
+does not index) is settled by hand, with the reasoning recorded in the fixture.
+
 `test/pages.js` serves the app from a `/chess-opener/` subpath the way Pages
 does and checks that nothing 404s, that the manifest and icons resolve, that the
 service worker registers against the project scope, that the app boots and a

@@ -9,7 +9,7 @@
   var OPENINGS = [
     /* ---------------- Open Games: 1.e4 e5 ---------------- */
     {
-      id: 'italian-giuoco-piano', name: 'Italian Game', variation: 'Giuoco Piano', eco: 'C50',
+      id: 'italian-giuoco-piano', name: 'Italian Game', variation: 'Giuoco Piano', eco: 'C54',
       side: 'w', family: 'Open Games', level: 1,
       moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'c3', 'Nf6', 'd4', 'exd4', 'cxd4', 'Bb4+', 'Nc3'],
       idea: 'The oldest way to meet 1...e5: aim the bishop at f7, build the big pawn centre with c3 and d4, and open lines while Black is still developing.',
@@ -18,11 +18,11 @@
               'After d4 exd4 cxd4 you own the centre; develop with Nc3 and castle.']
     },
     {
-      id: 'ruy-lopez-closed', name: 'Ruy Lopez', variation: 'Closed, Main Line', eco: 'C84',
+      id: 'ruy-lopez-closed', name: 'Ruy Lopez', variation: 'Closed, Main Line', eco: 'C92',
       side: 'w', family: 'Open Games', level: 2,
       moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'a6', 'Ba4', 'Nf6', 'O-O', 'Be7', 'Re1', 'b5', 'Bb3', 'd6', 'c3', 'O-O', 'h3'],
       idea: 'The Spanish Torture. Pressure the knight defending e5, retreat the bishop to the a2–g8 diagonal, and slowly prepare d4 with c3 and Nbd2–f1–g3.',
-      plans: ['Bb5 pins the defender of e5 — the pressure is positional, not immediate.',
+      plans: ['Bb5 hits the defender of e5 — it is not a real pin while the d7 pawn blocks, and the pressure is positional.',
               'h3 stops ...Bg4 before playing d4; this move order matters.',
               'The knight tour Nb1–d2–f1–g3 is the classic regrouping.']
     },
@@ -33,12 +33,12 @@
       idea: 'Trade queens early and head for an endgame where Black’s bishop pair compensates for the wrecked kingside pawns. Kramnik’s answer to Kasparov.',
       plans: ['Accept the doubled c-pawns — the two bishops are worth it.',
               'The king on d8 is safe: no queens are left to attack it.',
-              'Black’s long-term plan is ...Ke8, ...Be7 and pressure on the queenside majority.']
+              'Black’s trumps are the bishop pair and ...Ke8, ...Be7; White’s is the healthy 4–3 kingside majority.']
     },
     {
       id: 'scotch-game', name: 'Scotch Game', variation: 'Classical', eco: 'C45',
       side: 'w', family: 'Open Games', level: 1,
-      moves: ['e4', 'e5', 'Nf3', 'Nc6', 'd4', 'exd4', 'Nxd4', 'Bc5', 'Be3', 'Qf6', 'c3', 'Nge7'],
+      moves: ['e4', 'e5', 'Nf3', 'Nc6', 'd4', 'exd4', 'Nxd4', 'Bc5', 'Be3', 'Qf6', 'c3', 'Nge7', 'Bc4'],
       idea: 'Blow the centre open immediately. Easier to learn than the Ruy Lopez and it leads to clear, open positions.',
       plans: ['d4 on move three cuts out most of Black’s prepared systems.',
               'Be3 supports the d4 knight and stops ...Bxd4 tricks.',
@@ -54,7 +54,7 @@
               'Qf3+ and Nc3 pile onto the pinned knight on d5.']
     },
     {
-      id: 'evans-gambit', name: 'Evans Gambit', variation: 'Main Line', eco: 'C51',
+      id: 'evans-gambit', name: 'Evans Gambit', variation: 'Main Line', eco: 'C52',
       side: 'w', family: 'Open Games', level: 3,
       moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'b4', 'Bxb4', 'c3', 'Ba5', 'd4', 'exd4', 'O-O', 'Nge7', 'cxd4'],
       idea: 'Give up a pawn to gain a move for c3 and d4. You get a huge centre and a raging initiative — the swashbuckling way to play the Italian.',
@@ -83,14 +83,14 @@
     {
       id: 'kings-gambit', name: "King's Gambit", variation: 'Kieseritzky', eco: 'C39',
       side: 'w', family: 'Open Games', level: 3,
-      moves: ['e4', 'e5', 'f4', 'exf4', 'Nf3', 'g5', 'h4', 'g4', 'Ne5', 'Nf6', 'd4', 'd6', 'Nd3', 'Nxe4'],
+      moves: ['e4', 'e5', 'f4', 'exf4', 'Nf3', 'g5', 'h4', 'g4', 'Ne5', 'Nf6', 'd4', 'd6', 'Nd3', 'Nxe4', 'Bxf4'],
       idea: 'The romantic era in one move. Offer the f-pawn to rip open the f-file and own the centre. Sharp, dangerous, and enormous fun.',
       plans: ['Nf3 first — stopping ...Qh4+ is the whole reason for the move order.',
               'h4 undermines the g5 pawn chain that props up f4.',
               'You are playing for the centre and the f-file, not for the pawn back.']
     },
     {
-      id: 'scholars-mate-defense', name: "Scholar's Mate", variation: 'How to refute it', eco: 'C20',
+      id: 'scholars-mate-defense', name: "Scholar's Mate", variation: 'How to refute it', eco: 'C23',
       side: 'b', family: 'Open Games', level: 1,
       moves: ['e4', 'e5', 'Bc4', 'Nc6', 'Qh5', 'g6', 'Qf3', 'Nf6', 'Ne2', 'Bg7'],
       idea: 'The four-move mate every beginner tries. Defend f7 with pieces, kick the queen with tempo, and you finish ahead in development.',
@@ -110,7 +110,7 @@
               'The d5 square is the price you pay — fight for it with ...Be6 and ...Nbd7.']
     },
     {
-      id: 'sicilian-dragon', name: 'Sicilian Defense', variation: 'Dragon, Yugoslav Attack', eco: 'B77',
+      id: 'sicilian-dragon', name: 'Sicilian Defense', variation: 'Dragon, Yugoslav Attack', eco: 'B76',
       side: 'b', family: 'Sicilian', level: 3,
       moves: ['e4', 'c5', 'Nf3', 'd6', 'd4', 'cxd4', 'Nxd4', 'Nf6', 'Nc3', 'g6', 'Be3', 'Bg7', 'f3', 'O-O', 'Qd2', 'Nc6'],
       idea: 'Fianchetto the dark-squared bishop and fire it down the long diagonal at White’s queenside. Both sides castle opposite ways and race.',
@@ -175,7 +175,7 @@
               'a3 and b4 gain queenside space and shut out ...Qb6 pressure.']
     },
     {
-      id: 'caro-kann-classical', name: 'Caro-Kann Defense', variation: 'Classical', eco: 'B18',
+      id: 'caro-kann-classical', name: 'Caro-Kann Defense', variation: 'Classical', eco: 'B19',
       side: 'b', family: 'Semi-Open', level: 2,
       moves: ['e4', 'c6', 'd4', 'd5', 'Nc3', 'dxe4', 'Nxe4', 'Bf5', 'Ng3', 'Bg6', 'h4', 'h6', 'Nf3', 'Nd7', 'h5', 'Bh7'],
       idea: 'The French’s well-behaved cousin: challenge the centre with ...d5 but get the light-squared bishop outside the pawn chain first.',
@@ -186,7 +186,7 @@
     {
       id: 'caro-kann-advance-white', name: 'Caro-Kann Defense', variation: 'Advance (as White)', eco: 'B12',
       side: 'w', family: 'Semi-Open', level: 2,
-      moves: ['e4', 'c6', 'd4', 'd5', 'e5', 'Bf5', 'Nf3', 'e6', 'Be2', 'c5', 'Be3', 'Nd7', 'O-O', 'Ne7'],
+      moves: ['e4', 'c6', 'd4', 'd5', 'e5', 'Bf5', 'Nf3', 'e6', 'Be2', 'c5', 'Be3', 'Nd7', 'O-O', 'Ne7', 'c4'],
       idea: 'Take the space and then harass the bishop that Black was so proud of getting outside the chain.',
       plans: ['e5 stakes out space before Black is developed.',
               'Nf3 and Be2 prepare a fast kingside castle and c4 or Nbd2–b3.',
@@ -220,7 +220,7 @@
               'You are gambling that White’s space becomes a liability.']
     },
     {
-      id: 'modern-defense', name: 'Modern Defense', variation: 'Classical', eco: 'B06',
+      id: 'modern-defense', name: 'Modern Defense', variation: 'Tiger’s Modern (…a6)', eco: 'B06',
       side: 'b', family: 'Semi-Open', level: 2,
       moves: ['e4', 'g6', 'd4', 'Bg7', 'Nc3', 'd6', 'Be3', 'a6', 'Qd2', 'Nd7', 'Nf3', 'b5'],
       idea: 'Fianchetto first, ask questions later. Flexible, offbeat, and it dodges nearly all mainstream preparation.',
@@ -249,7 +249,7 @@
               'a3 makes room for the bishop and prepares Rc1 and b4.']
     },
     {
-      id: 'slav-defense', name: 'Slav Defense', variation: 'Main Line', eco: 'D17',
+      id: 'slav-defense', name: 'Slav Defense', variation: 'Main Line', eco: 'D19',
       side: 'b', family: "Queen's Pawn", level: 2,
       moves: ['d4', 'd5', 'c4', 'c6', 'Nf3', 'Nf6', 'Nc3', 'dxc4', 'a4', 'Bf5', 'e3', 'e6', 'Bxc4', 'Bb4', 'O-O', 'O-O'],
       idea: 'The QGD without the bad bishop. Support d5 with the c-pawn instead, so the light-squared bishop can develop to f5 before ...e6.',
@@ -276,7 +276,7 @@
               'Long-term: Ne5, f4 and a kingside attack, or a queenside minority attack.']
     },
     {
-      id: 'catalan-opening', name: 'Catalan Opening', variation: 'Closed', eco: 'E06',
+      id: 'catalan-opening', name: 'Catalan Opening', variation: 'Open Defence, Classical', eco: 'E05',
       side: 'w', family: "Queen's Pawn", level: 3,
       moves: ['d4', 'Nf6', 'c4', 'e6', 'g3', 'd5', 'Bg2', 'Be7', 'Nf3', 'O-O', 'O-O', 'dxc4', 'Qc2', 'a6', 'Qxc4'],
       idea: 'A Queen’s Gambit with the bishop on g2. That bishop exerts pressure down the long diagonal for the entire game — sometimes for fifty moves.',
@@ -314,7 +314,7 @@
               'If the centre holds, White is winning; if it cracks, Black is.']
     },
     {
-      id: 'benoni-modern', name: 'Modern Benoni', variation: 'Main Line', eco: 'A61',
+      id: 'benoni-modern', name: 'Modern Benoni', variation: 'Main Line', eco: 'A72',
       side: 'b', family: 'Indian Defenses', level: 3,
       moves: ['d4', 'Nf6', 'c4', 'c5', 'd5', 'e6', 'Nc3', 'exd5', 'cxd5', 'd6', 'Nf3', 'g6', 'e4', 'Bg7', 'Be2', 'O-O'],
       idea: 'Unbalance the position immediately: Black gets a queenside pawn majority and the long diagonal, White gets space and a kingside attack.',
@@ -323,7 +323,7 @@
               'Beware White’s e4–e5 push — meet it before it arrives.']
     },
     {
-      id: 'benko-gambit', name: 'Benko Gambit', variation: 'Accepted', eco: 'A58',
+      id: 'benko-gambit', name: 'Benko Gambit', variation: 'Accepted', eco: 'A59',
       side: 'b', family: 'Indian Defenses', level: 3,
       moves: ['d4', 'Nf6', 'c4', 'c5', 'd5', 'b5', 'cxb5', 'a6', 'bxa6', 'Bxa6', 'Nc3', 'd6', 'e4', 'Bxf1', 'Kxf1', 'g6'],
       idea: 'A pawn for permanent pressure. The a- and b-files open toward White’s queenside and the pressure never goes away, even in the endgame.',
@@ -361,7 +361,7 @@
               'Keep the option of transposing to a Catalan or a Nimzo-English.']
     },
     {
-      id: 'reti-opening', name: 'Réti Opening', variation: 'Main Line', eco: 'A09',
+      id: 'reti-opening', name: 'Réti Opening', variation: 'Advance Variation', eco: 'A09',
       side: 'w', family: 'Flank Openings', level: 2,
       moves: ['Nf3', 'd5', 'c4', 'd4', 'b4', 'f6', 'e3', 'e5', 'c5', 'a5', 'Na3'],
       idea: 'Attack the centre from the wings before occupying it. A hypermodern system that keeps every option open for six or seven moves.',
@@ -370,7 +370,7 @@
               'Transpose to the English, Catalan or a QGD whenever it suits you.']
     },
     {
-      id: 'kings-indian-attack', name: "King's Indian Attack", variation: 'Universal Setup', eco: 'A07',
+      id: 'kings-indian-attack', name: "King's Indian Attack", variation: 'Universal Setup', eco: 'A08',
       side: 'w', family: 'Flank Openings', level: 1,
       moves: ['Nf3', 'd5', 'g3', 'Nf6', 'Bg2', 'e6', 'O-O', 'Be7', 'd3', 'O-O', 'Nbd2', 'c5', 'e4', 'Nc6', 'Re1'],
       idea: 'One setup, played against anything: Nf3, g3, Bg2, O-O, d3, Nbd2, e4. Then attack on the kingside. Zero memorisation required.',
@@ -381,9 +381,9 @@
     {
       id: 'vienna-game', name: 'Vienna Game', variation: 'Vienna Gambit', eco: 'C29',
       side: 'w', family: 'Open Games', level: 2,
-      moves: ['e4', 'e5', 'Nc3', 'Nf6', 'f4', 'd5', 'fxe5', 'Nxe4', 'Nf3', 'Be7', 'd4', 'O-O', 'Bd3', 'f5'],
-      idea: 'A King’s Gambit with the knight already developed, so ...Qh4+ is never an issue. Aggressive and much safer than it looks.',
-      plans: ['Nc3 first means f4 comes without allowing ...Qh4+.',
+      moves: ['e4', 'e5', 'Nc3', 'Nf6', 'f4', 'd5', 'fxe5', 'Nxe4', 'Nf3', 'Be7', 'd4', 'O-O', 'Bd3', 'f5', 'O-O'],
+      idea: 'A King’s Gambit where White develops first, so Black never gets the ...Qh4+ counterplay that makes the King’s Gambit scary. Aggressive and safer than it looks.',
+      plans: ['Developing before f4 is the point; after 2...Nf6 3.f4 the ...Qh4+ ideas never get going.',
               'The e5 pawn cramps Black and supports a kingside build-up.',
               'Develop Bd3 and Qe2 aiming at the black king.']
     },
@@ -394,7 +394,7 @@
       idea: 'Objectively dubious, practically lethal. If White plays the natural moves, Black mates on move eight. Every club player should see this once.',
       plans: ['...Qe7 threatens to regain the pawn and sets the trap.',
               '...Qb4+ picks up b2 and starts the hunt.',
-              'The finish ...Qc1# works because the queen is overloaded and c1 is undefended.']
+              'The finish ...Qc1# works because White’s own knight on b1 and pawn on c2 block every defence of c1.']
     },
     {
       id: 'stafford-gambit', name: 'Stafford Gambit', variation: 'Main Trap', eco: 'C42',
@@ -403,7 +403,7 @@
       idea: 'Sacrifice a pawn out of the Petrov for wild piece activity. Unsound against perfect play, devastating against natural play.',
       plans: ['...Nc6 offers the pawn to open lines toward f2 and the king.',
               'Bishops to c5 and g4 with a knight on e4 create mating nets.',
-              'The greedy 8.Bxd8?? loses on the spot to ...Bxf2+ and ...Bg4#.']
+              'The greedy 7.Bxd8?? loses on the spot to ...Bxf2+ and ...Bg4#.']
     },
     {
       id: 'legals-mate', name: "Légal's Mate", variation: 'Classic Trap', eco: 'C41',
