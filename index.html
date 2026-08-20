@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-board="forest">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0e1116">
+<meta name="description" content="Learn chess openings on your phone: drill the answers to the most common openings, play in a sandbox, and browse a study book.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chess Opener">
+<title>Chess Opener — learn openings by playing them</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chess Opener">
+<meta property="og:description" content="Drill the answers to the most common chess openings, play in a sandbox with a live opening guide, and track what you have learned.">
+<meta property="og:image" content="icons/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="app">
+  <header class="appbar" id="appbar"></header>
+  <main id="main"></main>
+
+  <nav class="tabbar" aria-label="Main">
+    <button data-tab="train" class="active">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8" fill="currentColor" stroke="none"/></svg>
+      <span>Train</span>
+    </button>
+    <button data-tab="sandbox">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6"/></svg>
+      <span>Sandbox</span>
+    </button>
+    <button data-tab="book">
+      <svg viewBox="0 0 24 24"><path d="M4 4.6A2.6 2.6 0 0 1 6.6 2H20v17.4H6.6A2.6 2.6 0 0 0 4 22z"/><path d="M4 19.4A2.6 2.6 0 0 1 6.6 16.8H20"/></svg>
+      <span>Book</span>
+    </button>
+    <button data-tab="you">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.6 20.5a7.4 7.4 0 0 1 14.8 0"/></svg>
+      <span>You</span>
+    </button>
+  </nav>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/chess.js"></script>
+<script src="js/openings.js"></script>
+<script src="js/pieces.js"></script>
+<script src="js/store.js"></script>
+<script src="js/board.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
