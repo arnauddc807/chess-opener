@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0e1116"/>
+  <g transform="translate(96 96) scale(0.71)">
+    <rect x="0" y="0" width="450" height="450" rx="24" fill="#6f8f5f"/>
+    <g fill="#e9e2d0">
+      <rect x="0" y="0" width="112.5" height="112.5"/><rect x="225" y="0" width="112.5" height="112.5"/>
+      <rect x="112.5" y="112.5" width="112.5" height="112.5"/><rect x="337.5" y="112.5" width="112.5" height="112.5"/>
+      <rect x="0" y="225" width="112.5" height="112.5"/><rect x="225" y="225" width="112.5" height="112.5"/>
+      <rect x="112.5" y="337.5" width="112.5" height="112.5"/><rect x="337.5" y="337.5" width="112.5" height="112.5"/>
+    </g>
+    <g transform="translate(112 112) scale(5)" fill="#e0a95f" stroke="#241a09" stroke-width="1.4" stroke-linejoin="round">
+      <path d="M22.5 4.6v8M18.8 8h7.4" fill="none" stroke="#e0a95f" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M22.5 13.4c3.4-3.4 9.4-3 11.4 1.2 1.7 3.6-.2 7-2.4 9.6l-2.3 2.8v3.4H15.8v-3.4l-2.3-2.8c-2.2-2.6-4.1-6-2.4-9.6 2-4.2 8-4.6 11.4-1.2z"/>
+      <path d="M12.8 30.4h19.4c1.6 0 2.7 1 2.7 2.3s-1.1 2.3-2.7 2.3H12.8c-1.6 0-2.7-1-2.7-2.3s1.1-2.3 2.7-2.3z"/>
+      <rect x="9.4" y="35.2" width="26.2" height="5.6" rx="1.9"/>
+    </g>
+  </g>
+</svg>
