@@ -133,6 +133,7 @@
   var App = {
     view: 'train',
     params: {},
+    token: 0,
     board: null,
     drill: null,
     sandbox: null,
@@ -152,6 +153,8 @@
 
   function go(view, params) {
     if (App.board) { App.board.destroy(); App.board = null; }
+    if (App.detail && App.detail.timer) clearInterval(App.detail.timer);
+    App.token++;
     App.view = view;
     App.params = params || {};
     setTab(tabFor(view));
@@ -393,8 +396,9 @@
 
     App.board.setLocked(true);
     setPrompt('Opponent is replying…', 'thinking');
+    var tok = App.token;
     setTimeout(function () {
-      if (!App.drill || App.drill !== d || d.done) return;
+      if (App.token !== tok || App.drill !== d || d.done) return;
       var san = d.opening.moves[d.ply];
       var m = d.chess.move(san);
       if (m) {
@@ -426,7 +430,8 @@
       Sfx.right();
       buzz(12);
       setPrompt('<strong>' + esc(expected) + '</strong> — that\'s the book move.', 'ok');
-      setTimeout(scheduleOpponent, 480);
+      var tok = App.token;
+      setTimeout(function () { if (App.token === tok) scheduleOpponent(); }, 480);
     } else {
       d.chess.undo();
       App.board.update();
@@ -471,7 +476,8 @@
     Sfx.move();
     updateDrillUI();
     setPrompt('The move was <strong>' + esc(expected) + '</strong>.', 'turn-' + d.opening.side);
-    setTimeout(scheduleOpponent, 620);
+    var tok = App.token;
+    setTimeout(function () { if (App.token === tok) scheduleOpponent(); }, 620);
   }
 
   function finishDrill(skipped) {
@@ -655,7 +661,9 @@
       var replies = bookMovesFrom(sb.history);
       if (replies.length) {
         App.board.setLocked(true);
+        var tok = App.token;
         setTimeout(function () {
+          if (App.token !== tok) return;
           var pick = replies[0].san;
           var mm = sb.chess.move(pick);
           if (mm) {
@@ -939,8 +947,9 @@
     if (d.ply >= d.opening.moves.length) detailGoto(0);
     d.playing = true;
     qs('#d-play').innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+    var tok = App.token;
     d.timer = setInterval(function () {
-      if (!App.detail || App.detail !== d) { clearInterval(d.timer); return; }
+      if (App.token !== tok || App.detail !== d) { clearInterval(d.timer); return; }
       if (d.ply >= d.opening.moves.length) { detailTogglePlay(); return; }
       detailGoto(d.ply + 1);
     }, 900);
